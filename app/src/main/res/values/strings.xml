@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EJurnal</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_tab_listJurnal">Jurnal</string>
+    <string name="content_tab_listRequest">Request Saya</string>
+    <string name="request_jurnal">Request Jurnal</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Masukkan kata</string>
+
+    <string name="judul_jurnal">Judul : </string>
+    <string name="penerbit">Penerbit</string>
+    <string name="tahun_terbit">Tahun Terbit</string>
+
+</resources>
