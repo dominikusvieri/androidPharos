@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.data.DataItem
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_list_jurnal.view.*
 
 class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
@@ -16,6 +17,7 @@ class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
             itemView.tv_list_judul.text = article.judul
             itemView.tv_list_penerbit.text = article.penerbit
             itemView.tv_list_tahunTerbit.text = article.tahunTerbit.toString()
+            Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
         }
     }
 

@@ -45,6 +45,9 @@ data class DataItem(
 	@field:SerializedName("updated_by")
 	val updatedBy: String? = null,
 
+	@SerializedName("image")
+	val image: String? = null,
+
 	@field:SerializedName("id")
 	val id: Int? = null,
 
