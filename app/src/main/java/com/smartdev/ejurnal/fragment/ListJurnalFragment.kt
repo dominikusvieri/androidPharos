@@ -10,13 +10,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
-import com.smartdev.ejurnal.adapter.NewsAdapter
+import com.smartdev.ejurnal.adapter.ShowArticleAdapter
+import com.smartdev.ejurnal.data.DataItem
 import kotlinx.android.synthetic.main.fragment_list_jurnal.*
 
 
 class ListJurnalFragment : Fragment() {
 
-    private lateinit var newsAdapter:NewsAdapter
+    private lateinit var showArticleAdapter: ShowArticleAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var newsViewModel: NewsViewModel
 
@@ -33,9 +34,9 @@ class ListJurnalFragment : Fragment() {
 
         viewManager = LinearLayoutManager(activity)
         //no need to add constructor cause of we defined array list
-        newsAdapter = NewsAdapter()
+        showArticleAdapter = ShowArticleAdapter()
         rv_jurnal.apply {
-            adapter = newsAdapter
+            adapter = showArticleAdapter
             layoutManager = viewManager
             observeViewModel()
         }
@@ -48,7 +49,7 @@ class ListJurnalFragment : Fragment() {
 
         newsViewModel.getResult().observe(
             viewLifecycleOwner, Observer { result ->
-                newsAdapter.updateList(result.articles)//to add data //result is News()
+                showArticleAdapter.updateList(result.data as List<DataItem>)//to add data //result is News()
                 //result == newsViewModel.getResults() data
             }
         )
@@ -57,6 +58,6 @@ class ListJurnalFragment : Fragment() {
     override fun onResume() {
         //to get result
         super.onResume()
-        newsViewModel.loadResult("technology")//data loading and get data
+        newsViewModel.loadResult()//data loading and get data
     }
 }
