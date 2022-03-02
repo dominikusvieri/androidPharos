@@ -1,9 +1,11 @@
 package com.smartdev.ejurnal.api
 
 import com.smartdev.ejurnal.data.ResponseJurnal
+import com.smartdev.ejurnal.data.ResponsePostJurnal
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
 
 class ApiShowJurnal {
     private val showJurnalInterface:InterfaceApiShowJurnal
@@ -23,4 +25,9 @@ class ApiShowJurnal {
     fun getShowJurnal():Call<ResponseJurnal>{
         return showJurnalInterface.getArticle()
     }
+
+    fun postShowJurnal(topik:String, deskripsi:String):Call<ResponsePostJurnal>{
+        return showJurnalInterface.postArticle("")
+    }
+
 }
