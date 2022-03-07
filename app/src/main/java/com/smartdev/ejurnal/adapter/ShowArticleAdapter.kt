@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.card_list_jurnal.view.*
 
 class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
     : RecyclerView.Adapter<ShowArticleAdapter.ArticleViewHolder>(){
+
     inner class ArticleViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
         fun bindArticle(article:DataItem){
             itemView.tv_list_judul.text = article.judul
@@ -22,6 +23,8 @@ class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
         }
     }
 
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_jurnal,parent,false)
         return ArticleViewHolder(view)
@@ -29,6 +32,7 @@ class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         holder.bindArticle(articleList[position])
+
     }
 
     override fun getItemCount(): Int {
