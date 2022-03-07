@@ -1,10 +1,7 @@
 package com.smartdev.ejurnal.data
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 data class ResponseJurnal(
 
 	@field:SerializedName("data")
@@ -12,26 +9,12 @@ data class ResponseJurnal(
 
 	@field:SerializedName("error")
 	val error: Error? = null
-) : Parcelable
+)
 
-@Parcelize
-data class Error(
-
-	@field:SerializedName("msg")
-	val msg: String? = null,
-
-	@field:SerializedName("code")
-	val code: Int? = null,
-
-	@field:SerializedName("status")
-	val status: Boolean? = null
-) : Parcelable
-
-@Parcelize
 data class DataItem(
 
 	@field:SerializedName("attachments")
-	val attachments: String? = null,
+	val attachments: List<String?>? = null,
 
 	@field:SerializedName("updated_at")
 	val updatedAt: String? = null,
@@ -45,9 +28,6 @@ data class DataItem(
 	@field:SerializedName("updated_by")
 	val updatedBy: String? = null,
 
-	@SerializedName("image")
-	val image: String? = null,
-
 	@field:SerializedName("id")
 	val id: Int? = null,
 
@@ -58,5 +38,20 @@ data class DataItem(
 	val tahunTerbit: Int? = null,
 
 	@field:SerializedName("pembuat")
-	val pembuat: String? = null
-) : Parcelable
+	val pembuat: String? = null,
+
+	@field:SerializedName("image")
+	val image: String? = null
+)
+
+data class Error(
+
+	@field:SerializedName("msg")
+	val msg: String? = null,
+
+	@field:SerializedName("code")
+	val code: Int? = null,
+
+	@field:SerializedName("status")
+	val status: Boolean? = null
+)

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.data.DataItem
+import com.smartdev.ejurnal.data.DataItemPost
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_list_jurnal.view.*
 

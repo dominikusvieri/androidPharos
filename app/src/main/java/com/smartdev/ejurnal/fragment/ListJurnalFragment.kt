@@ -1,6 +1,7 @@
 package com.smartdev.ejurnal.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
+import com.smartdev.ejurnal.activity.MainActivity
 import com.smartdev.ejurnal.adapter.ShowArticleAdapter
 import com.smartdev.ejurnal.data.DataItem
+import com.smartdev.ejurnal.data.DataItemPost
+import com.smartdev.ejurnal.data.TransferMethod
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_list_jurnal.*
 
 
@@ -20,7 +25,6 @@ class ListJurnalFragment : Fragment() {
     private lateinit var showArticleAdapter: ShowArticleAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var newsViewModel: NewsViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -31,7 +35,6 @@ class ListJurnalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         viewManager = LinearLayoutManager(activity)
         //no need to add constructor cause of we defined array list
         showArticleAdapter = ShowArticleAdapter()
@@ -59,5 +62,7 @@ class ListJurnalFragment : Fragment() {
         //to get result
         super.onResume()
         newsViewModel.loadResult()//data loading and get data
+        newsViewModel.postresult(transferMethod = TransferMethod("",(activity as MainActivity).tvJudul.text.toString(),(activity as MainActivity).tvDesc.text.toString()))
+        Log.i("testing",TransferMethod("",(activity as MainActivity).tvJudul.text.toString(),(activity as MainActivity).tvDesc.text.toString()).toString())
     }
 }

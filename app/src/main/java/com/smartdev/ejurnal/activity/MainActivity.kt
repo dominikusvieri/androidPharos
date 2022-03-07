@@ -2,8 +2,10 @@ package com.smartdev.ejurnal.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -14,6 +16,9 @@ import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.adapter.SectionPagerAdapter
 
 class MainActivity : AppCompatActivity(){
+    private lateinit var tvJudul:TextView
+    private lateinit var tvDesc:TextView
+
     companion object{
         @StringRes
         private val TAB_TITLES = intArrayOf(
@@ -27,6 +32,16 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tvJudul = findViewById(R.id.tvJudul)
+        tvDesc = findViewById(R.id.tvDesc)
+
+        if (intent.extras != null){
+            val bundle = intent.extras
+            tvJudul.setText(bundle!!.getString("judul"))
+            tvDesc.setText(bundle!!.getString("desc"))
+            Log.d("BISA", tvJudul.text.toString() + tvDesc.text.toString())
+        }
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)

@@ -2,6 +2,7 @@ package com.smartdev.ejurnal.api
 
 import com.smartdev.ejurnal.data.ResponseJurnal
 import com.smartdev.ejurnal.data.ResponsePostJurnal
+import com.smartdev.ejurnal.data.TransferMethod
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -26,8 +27,8 @@ class ApiShowJurnal {
         return showJurnalInterface.getArticle()
     }
 
-    fun postShowJurnal(topik:String, deskripsi:String):Call<ResponsePostJurnal>{
-        return showJurnalInterface.postArticle("")
+    fun postShowJurnal(transferMethod: TransferMethod):Call<ResponsePostJurnal>{
+        return showJurnalInterface.postArticle(transferMethod)
     }
 
 }

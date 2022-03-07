@@ -5,19 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.smartdev.ejurnal.R
+import com.smartdev.ejurnal.activity.MainActivity
+import com.smartdev.ejurnal.data.TransferMethod
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ListRequestFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ListRequestFragment : Fragment() {
+    private lateinit var textView: TextView
+    private lateinit var textView2: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,27 +26,19 @@ class ListRequestFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list_request, container, false)
+
+        val view =inflater.inflate(R.layout.fragment_list_request,container,false)
+        textView = view.findViewById<View>(R.id.tvJudul) as TextView
+        textView2 = view.findViewById<View>(R.id.tvDesc) as TextView
+
+        val bundle = arguments
+        val message = bundle!!.getString("mText")
+        val message2 = bundle!!.getString("mText")
+
+        textView.text = message
+        textView2.text = message2
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ListRequestFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ListRequestFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
