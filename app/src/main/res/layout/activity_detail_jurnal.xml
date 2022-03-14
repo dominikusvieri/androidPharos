@@ -31,7 +31,8 @@
             android:id="@+id/tv_isi_judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:maxLines="3"/>
 
         <TextView
             android:id="@+id/tv_item_penerbit"
@@ -92,6 +93,13 @@
             android:layout_marginTop="5dp"
             android:text="Lampiran : "
             android:textStyle="bold" />
+
+        <TextView
+            android:autoLink="web"
+            android:id="@+id/tv_isi_lampiran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
 </LinearLayout>

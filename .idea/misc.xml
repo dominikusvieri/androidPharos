@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/shape_button_request.xml" value="0.181" />
-        <entry key="app/src/main/res/layout/activity_detail_jurnal.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_detail_jurnal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_jurnal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_page.xml" value="0.3674698795180723" />
@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/layout/fragment_list_jurnal.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_list_request.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_request_jurnal.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/item_detail_jurnal.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.1359375" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>

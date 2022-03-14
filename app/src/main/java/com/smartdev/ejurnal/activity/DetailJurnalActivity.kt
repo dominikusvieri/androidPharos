@@ -14,13 +14,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class DetailJurnalActivity : AppCompatActivity() {
-//    lateinit var jurnal: Data
-    lateinit var service: Call<ResponseJurnalByID>
-    private lateinit var newsViewModel: NewsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_jurnal)
-//        observeViewModel()
+
 
         Log.d("intent",(intent.getIntExtra("JurnalID", 0)).toString() )
 
@@ -42,8 +39,11 @@ class DetailJurnalActivity : AppCompatActivity() {
                     tv_isi_judul.text = result?.judul
                     tv_isi_abstrak.text = result?.abstrak
                     tv_isi_tahun_terbit.text = result?.tahunTerbit.toString()
-                    tv_isi_tanggal_update.text = result?.updatedAt
+                    tv_isi_tanggal_update.text = result?.updatedBy
+                    val list = listOf(result?.attachments)
+                    val separator = "/n"
 
+                    tv_isi_lampiran.text = list.joinToString(separator).replace("]","").replace("[","").replace(",","")
                     Log.d("resultlist123>>>",result?.penerbit.toString())
                 }
             }
@@ -54,37 +54,5 @@ class DetailJurnalActivity : AppCompatActivity() {
 
         })
     }
-//    fun observeViewModel() {
-//        //create VM object
-//        newsViewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
-//        newsViewModel.loadResultbyID(100)
-//
-//
-//    }
 
-//    fun getDataDetailJurnal() {
-//        val apiShowJurnal: ApiShowJurnal = ApiShowJurnal()
-//        val apiCall = apiShowJurnal.getshowjurnalbyid(100)
-//        apiCall.enqueue(object : Callback<ResponseJurnalByID> {
-//            override fun onResponse(
-//                call: Call<ResponseJurnalByID>,
-//                response: Response<ResponseJurnalByID>
-//            ) {
-//                response.isSuccessful.let {
-//                    val result = response.body()?.data
-//
-//                    tv_item_penerbit.text = result?.penerbit
-//                    tv_item_judul.text = result?.judul
-//                    tv_isi_abstrak.text = result?.abstrak
-//
-//                    Log.d("resultlist123>>>",result?.penerbit.toString())
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<ResponseJurnalByID>, t: Throwable) {
-//                Log.d("FAILLLLLLL123", t.toString())
-//            }
-//
-//        })
-//    }
 }
