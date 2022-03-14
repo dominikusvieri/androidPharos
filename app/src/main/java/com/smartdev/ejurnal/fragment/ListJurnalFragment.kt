@@ -52,7 +52,7 @@ class ListJurnalFragment : Fragment() {
 
         newsViewModel.getResult().observe(
             viewLifecycleOwner, Observer { result ->
-                showArticleAdapter.updateList(result.data as List<DataItem>)//to add data //result is News()
+                activity?.let { showArticleAdapter.updateList(result.data as List<DataItem>, it) }//to add data //result is News()
                 //result == newsViewModel.getResults() data
             }
         )
@@ -61,8 +61,9 @@ class ListJurnalFragment : Fragment() {
     override fun onResume() {
         //to get result
         super.onResume()
-        newsViewModel.loadResult()//data loading and get data
+        newsViewModel.`loadResult`()//data loading and get data
         newsViewModel.postresult(transferMethod = TransferMethod("",(activity as MainActivity).tvJudul.text.toString(),(activity as MainActivity).tvDesc.text.toString()))
         Log.i("testing",TransferMethod("",(activity as MainActivity).tvJudul.text.toString(),(activity as MainActivity).tvDesc.text.toString()).toString())
     }
+
 }

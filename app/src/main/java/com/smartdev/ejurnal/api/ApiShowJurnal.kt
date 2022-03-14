@@ -1,6 +1,7 @@
 package com.smartdev.ejurnal.api
 
 import com.smartdev.ejurnal.data.ResponseJurnal
+import com.smartdev.ejurnal.data.ResponseJurnalByID
 import com.smartdev.ejurnal.data.ResponsePostJurnal
 import com.smartdev.ejurnal.data.TransferMethod
 import retrofit2.Call
@@ -29,6 +30,10 @@ class ApiShowJurnal {
 
     fun postShowJurnal(transferMethod: TransferMethod):Call<ResponsePostJurnal>{
         return showJurnalInterface.postArticle(transferMethod)
+    }
+
+    fun getshowjurnalbyid(id: Int):Call<ResponseJurnalByID>{
+        return showJurnalInterface.getArticleById(id)
     }
 
 }

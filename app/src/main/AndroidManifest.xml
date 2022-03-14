@@ -14,7 +14,7 @@
         android:theme="@style/Theme.EJurnal"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.PageActivity"
+            android:name=".activity.DetailJurnalActivity"
             android:exported="false" />
         <activity
             android:name=".activity.RequestButtonActivity"

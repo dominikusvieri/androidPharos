@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation">
+
+    <fragment
+        android:id="@+id/listJurnalFragment"
+        android:name="com.smartdev.ejurnal.fragment.ListJurnalFragment"
+        android:label="listJurnalFragment"
+        tools:layout="@layout/fragment_list_jurnal">
+        <action
+            android:id="@+id/action_listJurnalFragment_to_detailsFragment"
+            app:destination="@+id/detailsFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.smartdev.ejurnal.fragment.DetailJurnalFragment"
+        android:label="detailFragment"
+        tools:layout="@layout/fragment_detail_jurnal">
+        <action
+            android:id="@+id/action_deteilsFragment_to_listJurnalFragment"
+            app:destination="@id/listJurnalFragment"/>
+    </fragment>
+
+</navigation>
