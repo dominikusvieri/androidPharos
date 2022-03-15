@@ -15,91 +15,113 @@
         app:title="Detail Jurnal"
         app:titleTextColor="@color/white"
         android:minHeight="?attr/actionBarSize"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv_item_judul"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Judul : " />
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/tv_isi_judul"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:maxLines="3"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_item_penerbit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Penerbit : " />
+            android:layout_below="@+id/tv_isi_judul"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Penerbit : "
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_isi_penerbit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" />
+            android:layout_below="@+id/tv_isi_judul"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tv_item_penerbit"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_item_tahun_terbit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_item_penerbit"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
             android:text="Tahun terbit : " />
 
         <TextView
             android:id="@+id/tv_isi_tahun_terbit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" />
+            android:layout_below="@+id/tv_isi_penerbit"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_item_tahun_terbit"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_tanggal_update"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Diperbaharui oleh : " />
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/tv_item_tahun_terbit"
+            android:text="Diperbaharui oleh : "/>
 
         <TextView
             android:id="@+id/tv_isi_tanggal_update"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/tv_isi_tahun_terbit"
+            android:layout_toRightOf="@+id/tv_tanggal_update"/>
 
         <TextView
             android:id="@+id/tv_item_abstrak"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Abstrak : " />
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/tv_tanggal_update"
+            android:text="Abstrak : "/>
 
         <TextView
             android:id="@+id/tv_isi_abstrak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_below="@+id/tv_item_abstrak"/>
 
         <TextView
             android:id="@+id/tv_item_lampiran"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_isi_abstrak"
+            android:layout_marginTop="10dp"
             android:text="Lampiran : "
-            android:textStyle="bold" />
+            android:textSize="16sp"/>
 
         <TextView
-            android:autoLink="web"
             android:id="@+id/tv_isi_lampiran"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" />
-    </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_item_lampiran"
+            android:autoLink="web" />
+    </RelativeLayout>
 
 </LinearLayout>

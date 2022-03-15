@@ -40,6 +40,7 @@ class DetailJurnalActivity : AppCompatActivity() {
                     tv_isi_abstrak.text = result?.abstrak
                     tv_isi_tahun_terbit.text = result?.tahunTerbit.toString()
                     tv_isi_tanggal_update.text = result?.updatedBy
+
                     val list = listOf(result?.attachments)
                     val separator = "/n"
 
