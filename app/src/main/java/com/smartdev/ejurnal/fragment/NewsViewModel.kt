@@ -44,28 +44,28 @@ class NewsViewModel : ViewModel() {
         })
     }
 
-    fun postresult(transferMethod:TransferMethod){
-        val apiCall = apiShowJurnal.postShowJurnal(transferMethod)
-        apiCall.enqueue(object : Callback<ResponsePostJurnal>{
-            override fun onResponse(
-                call: Call<ResponsePostJurnal>,
-                response: Response<ResponsePostJurnal>
-            ) {
-                response.isSuccessful.let {
-                    val resultList = ResponsePostJurnal(
-                        response.body()?.data ?: emptyList()
-                    )
-                    Log.d("resultlist>>>",response.body().toString())
-                    resultrequest.value = resultList
-                }
-            }
-
-            override fun onFailure(call: Call<ResponsePostJurnal>, t: Throwable) {
-                Log.d("FAILLLLLLL", t.toString())
-            }
-
-        })
-    }
+//    fun postresult(transferMethod:TransferMethod){
+//        val apiCall = apiShowJurnal.postShowJurnal(transferMethod)
+//        apiCall.enqueue(object : Callback<ResponsePostJurnal>{
+//            override fun onResponse(
+//                call: Call<ResponsePostJurnal>,
+//                response: Response<ResponsePostJurnal>
+//            ) {
+//                response.isSuccessful.let {
+//                    val resultList = ResponsePostJurnal(
+//                        response.body()?.data ?: emptyList()
+//                    )
+//                    Log.d("resultlist>>>",response.body().toString())
+//                    resultrequest.value = resultList
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<ResponsePostJurnal>, t: Throwable) {
+//                Log.d("FAILLLLLLL", t.toString())
+//            }
+//
+//        })
+//    }
 
 }
 

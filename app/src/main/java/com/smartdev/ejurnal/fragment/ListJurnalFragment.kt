@@ -61,8 +61,8 @@ class ListJurnalFragment : Fragment() {
         //to get result
         super.onResume()
         newsViewModel.`loadResult`()//data loading and get data
-        newsViewModel.postresult(transferMethod = TransferMethod("",(activity as JurnalMainActivity).tvJudul.text.toString(),(activity as JurnalMainActivity).tvDesc.text.toString()))
-        Log.i("testing",TransferMethod("",(activity as JurnalMainActivity).tvJudul.text.toString(),(activity as JurnalMainActivity).tvDesc.text.toString()).toString())
+//        newsViewModel.postresult(transferMethod = TransferMethod("",(activity as JurnalMainActivity).tvJudul.text.toString(),(activity as JurnalMainActivity).tvDesc.text.toString()))
+//        Log.i("testing",TransferMethod("",(activity as JurnalMainActivity).tvJudul.text.toString(),(activity as JurnalMainActivity).tvDesc.text.toString()).toString())
     }
 
 }
