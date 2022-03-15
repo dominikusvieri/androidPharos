@@ -61,7 +61,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        android:text="Judul Jurnal"
+        android:text="Deskripsi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvRequest"/>
@@ -75,7 +75,7 @@
         android:backgroundTint="@color/black"
         android:ems="20"
         android:inputType="text"
-        android:hint="Masukkan Judul Jurnal"
+        android:hint="Masukkan Deskripsi Jurnal"
         android:textColorHint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +88,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:text="Deskripsi"
+        android:text="Judul"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etJudulJurnal"/>
 
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Masukkan Deskripsi Jurnal"
+        android:hint="Masukkan Judul Jurnal"
         android:backgroundTint="@color/black"
         android:ems="20"
         android:inputType="text"

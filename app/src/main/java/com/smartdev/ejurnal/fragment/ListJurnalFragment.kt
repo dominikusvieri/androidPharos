@@ -11,10 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
-import com.smartdev.ejurnal.activity.MainActivity
+import com.smartdev.ejurnal.activity.JurnalMainActivity
 import com.smartdev.ejurnal.adapter.ShowArticleAdapter
 import com.smartdev.ejurnal.data.DataItem
-import com.smartdev.ejurnal.data.DataItemPost
 import com.smartdev.ejurnal.data.TransferMethod
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_list_jurnal.*
@@ -62,8 +61,8 @@ class ListJurnalFragment : Fragment() {
         //to get result
         super.onResume()
         newsViewModel.`loadResult`()//data loading and get data
-        newsViewModel.postresult(transferMethod = TransferMethod("",(activity as MainActivity).tvJudul.text.toString(),(activity as MainActivity).tvDesc.text.toString()))
-        Log.i("testing",TransferMethod("",(activity as MainActivity).tvJudul.text.toString(),(activity as MainActivity).tvDesc.text.toString()).toString())
+        newsViewModel.postresult(transferMethod = TransferMethod("",(activity as JurnalMainActivity).tvJudul.text.toString(),(activity as JurnalMainActivity).tvDesc.text.toString()))
+        Log.i("testing",TransferMethod("",(activity as JurnalMainActivity).tvJudul.text.toString(),(activity as JurnalMainActivity).tvDesc.text.toString()).toString())
     }
 
 }

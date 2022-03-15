@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.adapter.SectionPagerAdapter
 
-class MainActivity : AppCompatActivity(){
+class JurnalMainActivity : AppCompatActivity(){
     private lateinit var tvJudul:TextView
     private lateinit var tvDesc:TextView
 
