@@ -42,11 +42,7 @@ class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        val data = articleList[position]
         holder.bindArticle(articleList[position])
-        holder.itemView.setOnClickListener {
-
-        }
     }
 
     override fun getItemCount(): Int {

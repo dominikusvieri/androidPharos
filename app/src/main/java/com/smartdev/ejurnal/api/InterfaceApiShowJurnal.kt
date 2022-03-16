@@ -1,9 +1,6 @@
 package com.smartdev.ejurnal.api
 
-import com.smartdev.ejurnal.data.ResponseJurnal
-import com.smartdev.ejurnal.data.ResponseJurnalByID
-import com.smartdev.ejurnal.data.ResponsePostJurnal
-import com.smartdev.ejurnal.data.TransferMethod
+import com.smartdev.ejurnal.data.*
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -21,4 +18,9 @@ interface InterfaceApiShowJurnal {
     fun postArticle(
         @Body transferMethod: TransferMethod
     ):Call<ResponsePostJurnal>
+
+    @GET("requests?")
+    fun getArticleByUserID(
+        @Query("userID")user_id:Int
+    ):Call<ResponseJurnalByUserID>
 }

@@ -1,9 +1,7 @@
 package com.smartdev.ejurnal.api
 
-import com.smartdev.ejurnal.data.ResponseJurnal
-import com.smartdev.ejurnal.data.ResponseJurnalByID
-import com.smartdev.ejurnal.data.ResponsePostJurnal
-import com.smartdev.ejurnal.data.TransferMethod
+import android.util.Log
+import com.smartdev.ejurnal.data.*
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -32,8 +30,12 @@ class ApiShowJurnal {
         return showJurnalInterface.postArticle(transferMethod)
     }
 
-    fun getshowjurnalbyid(id: Int):Call<ResponseJurnalByID>{
+    fun getShowJurnalByID(id: Int):Call<ResponseJurnalByID>{
         return showJurnalInterface.getArticleById(id)
+    }
+
+    fun getShowJurnalByUserID(user_id: Int): Call<ResponseJurnalByUserID>{
+        return showJurnalInterface.getArticleByUserID(user_id)
     }
 
 }

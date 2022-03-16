@@ -44,6 +44,8 @@ class NewsViewModel : ViewModel() {
         })
     }
 
+
+
 //    fun postresult(transferMethod:TransferMethod){
 //        val apiCall = apiShowJurnal.postShowJurnal(transferMethod)
 //        apiCall.enqueue(object : Callback<ResponsePostJurnal>{

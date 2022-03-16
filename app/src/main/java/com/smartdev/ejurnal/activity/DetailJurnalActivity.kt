@@ -27,7 +27,7 @@ class DetailJurnalActivity : AppCompatActivity() {
     private fun getDataDetailJurnal(id: Int?) {
         Log.d("Pindah", id.toString())
         val apiShowJurnal: ApiShowJurnal = ApiShowJurnal()
-        val apiCall = id?.let { apiShowJurnal.getshowjurnalbyid(it) }
+        val apiCall = id?.let { apiShowJurnal.getShowJurnalByID(it) }
         apiCall?.enqueue(object : Callback<ResponseJurnalByID>{
             override fun onResponse(
                 call: Call<ResponseJurnalByID>,
