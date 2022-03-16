@@ -12,6 +12,8 @@ import com.smartdev.ejurnal.data.DataItem
 import com.smartdev.ejurnal.data.DataJurnal
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_list_jurnal.view.*
+import kotlinx.android.synthetic.main.card_list_jurnal.view.img_jurnal_photo
+import kotlinx.android.synthetic.main.card_list_jurnal_byid.view.*
 
 class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList())
     : RecyclerView.Adapter<ShowArticleByUserIDAdapter.ArticleByIDViewHolder>() {
@@ -19,8 +21,8 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
     private lateinit var activity : Activity
     inner class ArticleByIDViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
         fun bindArticleByID(article : DataJurnal){
-            itemView.tv_list_judul.text = article.topik
-            itemView.tv_list_tahunTerbit.text = article.lastUpdate
+            itemView.tv_topik.text = article.topik
+            itemView.tv_tanggal_update.text = article.lastUpdate
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
             itemView.img_jurnal_photo.setOnClickListener {
                 val intent = Intent(activity, DetailJurnalActivity::class.java)
@@ -31,7 +33,7 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleByIDViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_jurnal,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_list_jurnal_byid,parent,false)
         return ArticleByIDViewHolder(view)
     }
 

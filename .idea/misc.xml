@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_request_button.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_request_jurnal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_list_jurnal.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/card_list_jurnal_byid.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_detail_jurnal.xml" value="0.15" />
         <entry key="app/src/main/res/layout/fragment_jurnal.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_list_jurnal.xml" value="0.1" />

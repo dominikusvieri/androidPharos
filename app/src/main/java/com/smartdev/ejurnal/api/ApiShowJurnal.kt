@@ -1,6 +1,7 @@
 package com.smartdev.ejurnal.api
 
 import android.util.Log
+import com.google.gson.GsonBuilder
 import com.smartdev.ejurnal.data.*
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -15,6 +16,7 @@ class ApiShowJurnal {
     }
 
     init {
+        val gson = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create()
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
