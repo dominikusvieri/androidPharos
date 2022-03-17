@@ -53,11 +53,14 @@ class ListRequestFragment : Fragment() {
                 call: Call<ResponseJurnalByUserID>,
                 response: Response<ResponseJurnalByUserID>
             ) {
-                activity?.let {
-                    showArticleByIDAdapter.updateList(response.body()?.dataReqId as List<DataJurnal>,
-                        it
-                    )
+                response.isSuccessful.let {
+                    activity?.let {
+                        showArticleByIDAdapter.updateList(response.body()?.dataReqId as List<DataJurnal>,
+                            it
+                        )
+                    }
                 }
+
                 Log.d("SuccessGGG", call.request().url().toString())
                 Log.d("Successbgt", (response.body()?.dataReqId?.get(0)?.topik).toString())
             }

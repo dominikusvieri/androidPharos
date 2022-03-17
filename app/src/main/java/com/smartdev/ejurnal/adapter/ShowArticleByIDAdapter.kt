@@ -22,7 +22,11 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
     inner class ArticleByIDViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
         fun bindArticleByID(article : DataJurnal){
             itemView.tv_topik.text = article.topik
-            itemView.tv_tanggal_update.text = article.lastUpdate
+//            itemView.tv_tanggal_update.text = article.lastUpdate
+
+            val dateJurnal = (article.lastUpdate).toString()
+
+            itemView.tv_tanggal_update.text = dateJurnal.replace("T","     ").replace("+07:00","")
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
             itemView.img_jurnal_photo.setOnClickListener {
                 val intent = Intent(activity, DetailJurnalActivity::class.java)

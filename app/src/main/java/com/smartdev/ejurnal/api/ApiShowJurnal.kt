@@ -12,7 +12,7 @@ class ApiShowJurnal {
     private val showJurnalInterface:InterfaceApiShowJurnal
 
     companion object{
-        const val BASE_URL = "http://10.0.111.64:8080/ppds/"
+        const val BASE_URL = "https://staging-api.cfu.pharmalink.id/ppds/"
     }
 
     init {
