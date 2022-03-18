@@ -11,4 +11,7 @@
     <string name="penerbit">Penerbit</string>
     <string name="tahun_terbit">Tahun Terbit</string>
 
+
+    <string name="order_datetime">%s</string>
+
 </resources>
