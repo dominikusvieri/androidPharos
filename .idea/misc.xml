@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/androidPharos/app/src/main/res/layout/fragment_list_jurnal.xml" value="0.358695652173913" />
         <entry key="app/src/main/res/drawable/shape_button_request.xml" value="0.181" />
         <entry key="app/src/main/res/layout/activity_detail_jurnal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_jurnal.xml" value="0.25" />

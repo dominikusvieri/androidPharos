@@ -6,14 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ListJurnalFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_jurnal"
-        tools:listitem="@layout/card_list_jurnal"
+    <SearchView
+        android:id="@+id/sv_jurnal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_jurnal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/sv_jurnal"
+        tools:listitem="@layout/card_list_jurnal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
