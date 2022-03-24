@@ -16,7 +16,6 @@ class ApiShowJurnal {
     }
 
     init {
-        val gson = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create()
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -38,6 +37,12 @@ class ApiShowJurnal {
 
     fun getShowJurnalByUserID(user_id: Int): Call<ResponseJurnalByUserID>{
         return showJurnalInterface.getArticleByUserID(user_id)
+    }
+
+    fun getShowSearchJurnal(judul: String):Call<ResponseJurnal>{
+        Log.d("Return", judul.toString())
+        return showJurnalInterface.getJudulArticle(judul)
+
     }
 
 }

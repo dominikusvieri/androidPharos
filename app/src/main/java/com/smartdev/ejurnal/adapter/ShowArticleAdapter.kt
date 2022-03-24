@@ -6,10 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.activity.DetailJurnalActivity
 import com.smartdev.ejurnal.data.DataItem
+import com.smartdev.ejurnal.data.DataJudul
+import com.smartdev.ejurnal.data.ResponseJudulJurnal
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_list_jurnal.view.*
 
@@ -50,7 +53,7 @@ class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
         return articleList.size
     }
 
-    fun updateList(article: List<DataItem> ,activity: Activity){
+    fun updateList(article: List<DataItem>, activity: FragmentActivity){
         this.articleList = article
         this.activity = activity
         notifyDataSetChanged()

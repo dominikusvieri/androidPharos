@@ -8,6 +8,10 @@
 
     <SearchView
         android:id="@+id/sv_jurnal"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:inputType="text"
+        android:queryHint="Cari Judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
