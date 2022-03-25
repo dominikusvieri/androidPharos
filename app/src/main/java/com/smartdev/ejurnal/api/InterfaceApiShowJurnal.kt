@@ -28,4 +28,9 @@ interface InterfaceApiShowJurnal {
     fun getJudulArticle(
         @Query("judul") judul: String
     ):Call<ResponseJurnal>
+
+    @GET("articles?")
+    fun getArticleByRequest(
+        @Query("requestID") request_id:Int
+    ):Call<ResponseRequestById>
 }

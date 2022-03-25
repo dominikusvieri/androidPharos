@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.activity.DetailJurnalActivity
+import com.smartdev.ejurnal.activity.DetailJurnalByIdActivity
 import com.smartdev.ejurnal.data.DataItem
 import com.smartdev.ejurnal.data.DataJurnal
 import com.squareup.picasso.Picasso
@@ -26,7 +27,7 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
             itemView.tv_tanggal_update.text = dateUpdate.replace("T", "      ").replace("+07:00", "")
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
             itemView.img_jurnal_photo.setOnClickListener {
-                val intent = Intent(activity, DetailJurnalActivity::class.java)
+                val intent = Intent(activity, DetailJurnalByIdActivity::class.java)
                 intent.putExtra("JurnalID",article.id)
                 activity.startActivity(intent)
             }

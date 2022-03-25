@@ -42,7 +42,10 @@ class ApiShowJurnal {
     fun getShowSearchJurnal(judul: String):Call<ResponseJurnal>{
         Log.d("Return", judul.toString())
         return showJurnalInterface.getJudulArticle(judul)
+    }
 
+    fun getDetailRequestJurnal(request_id:Int):Call<ResponseRequestById>{
+        return showJurnalInterface.getArticleByRequest(request_id)
     }
 
 }

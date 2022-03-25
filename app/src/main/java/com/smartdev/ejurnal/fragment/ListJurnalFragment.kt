@@ -28,8 +28,6 @@ class ListJurnalFragment : Fragment() {
     private lateinit var showArticleAdapter: ShowArticleAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var newsViewModel: NewsViewModel
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var recyclerView: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
