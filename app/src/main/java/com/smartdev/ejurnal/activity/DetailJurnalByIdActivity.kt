@@ -33,6 +33,8 @@ class DetailJurnalByIdActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun getDetailRequest(request_id: Int) {
         val apiShowJurnal: ApiShowJurnal = ApiShowJurnal()
         val apiCall = request_id.let { apiShowJurnal.getDetailRequestJurnal(it) }

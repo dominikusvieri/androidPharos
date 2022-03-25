@@ -11,10 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/teal_200"
+        android:minHeight="?attr/actionBarSize"
         app:title="Detail Request"
         app:titleTextColor="@color/white"
-        android:minHeight="?attr/actionBarSize"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_topik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rv_detailRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detailRequest"

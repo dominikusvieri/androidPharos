@@ -28,7 +28,8 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
             itemView.img_jurnal_photo.setOnClickListener {
                 val intent = Intent(activity, DetailJurnalByIdActivity::class.java)
-                intent.putExtra("JurnalID",article.id)
+                intent.putExtra("RequestID",article.id)
+                intent.putExtra("Topik", article.topik)
                 activity.startActivity(intent)
             }
         }

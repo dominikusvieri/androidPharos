@@ -48,4 +48,6 @@ class ApiShowJurnal {
         return showJurnalInterface.getArticleByRequest(request_id)
     }
 
+
+
 }

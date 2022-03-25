@@ -26,7 +26,7 @@ class DetailRequestAdapter (var requestList: List<DataRequest> = ArrayList())
 
             itemView.img_jurnal_photo.setOnClickListener{
                 val intent = Intent(activity, DetailJurnalActivity::class.java)
-                intent.putExtra("RequestID",article.id)
+                intent.putExtra("JurnalID",article.id)
                 activity.startActivity(intent)
             }
         }
