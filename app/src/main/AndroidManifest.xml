@@ -15,16 +15,17 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".activity.DetailJurnalByIdActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.DetailJurnalActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:parentActivityName=".activity.JurnalMainActivity"/>
         <activity
             android:name=".activity.RequestButtonActivity"
             android:exported="false" />
         <activity
             android:name=".activity.RequestJurnalActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.JurnalMainActivity"
             android:exported="true">

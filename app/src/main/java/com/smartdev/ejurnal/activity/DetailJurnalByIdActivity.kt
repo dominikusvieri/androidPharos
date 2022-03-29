@@ -1,5 +1,6 @@
 package com.smartdev.ejurnal.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,12 @@ class DetailJurnalByIdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_jurnal_by_id)
+
+        iv_back.setOnClickListener{
+            val intent = Intent(this, JurnalMainActivity::class.java)
+            startActivity(intent)
+        }
+
         Log.d("IDREQ", (intent.getIntExtra("RequestID", 0)).toString())
 
         getDetailRequest(intent.getIntExtra("RequestID", 0))
@@ -43,9 +50,12 @@ class DetailJurnalByIdActivity : AppCompatActivity() {
                 call: Call<ResponseRequestById>,
                 response: Response<ResponseRequestById>
             ) {
-                response.body().let {
+                response.isSuccessful.let {
+                    val result =  response.body()?.dataRequest
+                    tv_topik.text
                     detailRequestAdapter.updateList(response.body()?.dataRequest as List<DataRequest>, activity = this@DetailJurnalByIdActivity)
                 }
+
             }
 
             override fun onFailure(call: Call<ResponseRequestById>, t: Throwable) {

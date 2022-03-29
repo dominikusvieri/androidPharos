@@ -24,6 +24,11 @@ class RequestJurnalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_jurnal)
 
+        iv_back.setOnClickListener{
+            val intent = Intent(this, JurnalMainActivity::class.java)
+            startActivity(intent)
+        }
+
         btnRequest.setOnClickListener {
             val judulJurnal = etJudulJurnal.text.toString()
             val deskripsiJurnal = etDeskripsiJurnal.text.toString()
