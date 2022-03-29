@@ -30,8 +30,11 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
                 val intent = Intent(activity, DetailJurnalByIdActivity::class.java)
                 intent.putExtra("RequestID",article.id)
                 intent.putExtra("Topik", article.topik)
+                intent.putExtra("Deskripsi", article.deskripsi)
                 activity.startActivity(intent)
             }
+
+
         }
     }
 

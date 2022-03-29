@@ -29,7 +29,11 @@ class DetailJurnalByIdActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        tv_topik.text = intent.getStringExtra("Topik")
+        tv_desc.text = intent.getStringExtra("Deskripsi")
+
         Log.d("IDREQ", (intent.getIntExtra("RequestID", 0)).toString())
+        Log.d("TopikIntent", intent.getStringExtra("Topik").toString())
 
         getDetailRequest(intent.getIntExtra("RequestID", 0))
         viewManager = LinearLayoutManager(this)
@@ -52,7 +56,6 @@ class DetailJurnalByIdActivity : AppCompatActivity() {
             ) {
                 response.isSuccessful.let {
                     val result =  response.body()?.dataRequest
-                    tv_topik.text
                     detailRequestAdapter.updateList(response.body()?.dataRequest as List<DataRequest>, activity = this@DetailJurnalByIdActivity)
                 }
 
