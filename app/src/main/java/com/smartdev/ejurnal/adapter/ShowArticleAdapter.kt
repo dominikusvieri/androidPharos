@@ -28,7 +28,7 @@ class ShowArticleAdapter (var articleList:List<DataItem> = ArrayList())
             itemView.tv_list_tahunTerbit.text = article.tahunTerbit.toString()
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
 
-            itemView.img_jurnal_photo.setOnClickListener {
+            itemView.setOnClickListener {
                 Log.d("Print123","TEST123")
                 val intent = Intent(activity, DetailJurnalActivity::class.java)
                 Log.d("Print123Jurnal",article.id.toString())

@@ -24,7 +24,7 @@ class DetailRequestAdapter (var requestList: List<DataRequest> = ArrayList())
             itemView.tv_list_tahunTerbit.text = article.tahunTerbit.toString()
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
 
-            itemView.img_jurnal_photo.setOnClickListener{
+            itemView.setOnClickListener{
                 val intent = Intent(activity, DetailJurnalActivity::class.java)
                 intent.putExtra("JurnalID",article.id)
                 activity.startActivity(intent)

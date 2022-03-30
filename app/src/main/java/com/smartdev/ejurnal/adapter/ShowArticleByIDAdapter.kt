@@ -26,14 +26,13 @@ class ShowArticleByUserIDAdapter (var articleList:List<DataJurnal> = ArrayList()
             val dateUpdate = (article.lastUpdate).toString()
             itemView.tv_tanggal_update.text = dateUpdate.replace("T", "      ").replace("+07:00", "")
             Picasso.get().load(article.image).placeholder(R.drawable.jurnal_icon).into(itemView.img_jurnal_photo)
-            itemView.img_jurnal_photo.setOnClickListener {
+            itemView.setOnClickListener {
                 val intent = Intent(activity, DetailJurnalByIdActivity::class.java)
                 intent.putExtra("RequestID",article.id)
                 intent.putExtra("Topik", article.topik)
                 intent.putExtra("Deskripsi", article.deskripsi)
                 activity.startActivity(intent)
             }
-
 
         }
     }
