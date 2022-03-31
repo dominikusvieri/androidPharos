@@ -1,6 +1,7 @@
 package com.smartdev.ejurnal.activity
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -14,6 +15,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.smartdev.ejurnal.R
 import com.smartdev.ejurnal.adapter.SectionPagerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class JurnalMainActivity : AppCompatActivity(){
     private lateinit var tvJudul:TextView
@@ -67,6 +69,7 @@ class JurnalMainActivity : AppCompatActivity(){
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#ffffff"))
         when (item.itemId){
             R.id.menu1 ->{
                 val i = Intent(this, RequestJurnalActivity::class.java)

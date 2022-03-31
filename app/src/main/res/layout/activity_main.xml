@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.JurnalMainActivity"
     android:orientation="vertical"
-    android:background="#EDF5FD">
+    android:background="#fff">
 
    <androidx.appcompat.widget.Toolbar
        android:layout_width="match_parent"
@@ -30,6 +30,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:background="@drawable/gradient"
+       app:tabIndicatorColor="@color/white"
        app:tabTextColor="@color/white"/>
 
    <androidx.viewpager2.widget.ViewPager2
