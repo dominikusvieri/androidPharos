@@ -34,9 +34,9 @@ class RequestJurnalActivity : AppCompatActivity() {
             val deskripsiJurnal = etDeskripsiJurnal.text.toString()
 
             if (TextUtils.isEmpty(judulJurnal)){
-                Toast.makeText(applicationContext,"Isi Judul", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Isi Judul Terlebih Dahulu", Toast.LENGTH_LONG).show()
             } else if (TextUtils.isEmpty(deskripsiJurnal)){
-                Toast.makeText(applicationContext,"Isi Deskripsi", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Isi Deskripsi Terlebih Dahulu", Toast.LENGTH_LONG).show()
             } else if (!TextUtils.isEmpty(judulJurnal)&&!TextUtils.isEmpty(deskripsiJurnal)){
                 postresult(transferMethod = TransferMethod("424",etDeskripsiJurnal.text.toString(),etJudulJurnal.text.toString()))
             }
