@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.JurnalMainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#EDF5FD">
 
    <androidx.appcompat.widget.Toolbar
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/toolbar"
-       android:background="@color/teal_200"
+       android:background="@drawable/gradient"
        app:title="@string/app_name"
        app:titleTextColor="@color/white">
       
@@ -28,7 +29,7 @@
        android:id="@+id/tabLayout"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:background="@color/teal_200"
+       android:background="@drawable/gradient"
        app:tabTextColor="@color/white"/>
 
    <androidx.viewpager2.widget.ViewPager2
@@ -38,11 +39,13 @@
 
    <TextView
        android:id="@+id/tvJudul"
+       android:textColor="@color/black"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"/>
 
    <TextView
        android:id="@+id/tvDesc"
+       android:textColor="@color/black"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"/>
 

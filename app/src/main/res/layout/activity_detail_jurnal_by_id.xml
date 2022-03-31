@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF5FD"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.DetailJurnalByIdActivity">
 
@@ -10,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/teal_200"
+        android:background="@drawable/gradient"
         android:minHeight="?attr/actionBarSize"
         app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints">
@@ -34,8 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Topik"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
@@ -47,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:text="Deskripsi"
+        android:textColor="@color/black"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_detailRequest"
         app:layout_constraintStart_toStartOf="parent" />

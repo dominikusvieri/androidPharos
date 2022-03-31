@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF5FD"
     tools:context=".fragment.ListJurnalFragment">
 
     <SearchView
         android:id="@+id/sv_jurnal"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/bg_kalimat"
         android:inputType="text"
         android:queryHint="Cari Judul"
         android:layout_width="match_parent"

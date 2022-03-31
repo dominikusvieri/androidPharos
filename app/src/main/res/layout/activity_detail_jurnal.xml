@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#EBDDE2"
+    android:background="#EDF5FD"
+
 
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -124,9 +125,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#153E7E"
             android:background="@drawable/bg_white_transparant"
+            android:padding="5dp"
             android:text="Diperbaharui oleh : "
+            android:textColor="#153E7E"
             android:textSize="16sp" />
 
         <TextView
@@ -134,6 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:padding="5dp"
             android:textColor="#153E7E"
             android:layout_toRightOf="@+id/tv_tanggal_update"
             android:background="@drawable/bg_white_transparant"
@@ -163,7 +166,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_item_abstrak"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/bg_white_transparant"
             android:textSize="16sp" />
@@ -187,6 +192,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_item_lampiran"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="15dp"
             android:autoLink="web"
             android:background="@drawable/bg_white_transparant"

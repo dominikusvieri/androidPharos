@@ -10,12 +10,13 @@
     android:layout_marginTop="4dp"
     android:layout_marginRight="8dp"
     android:layout_marginBottom="4dp"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:background="@drawable/bg_kalimat">
 
         <ImageView
             android:id="@+id/img_jurnal_photo"
@@ -39,6 +40,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:maxLines="2"
+            android:background="@drawable/bg_white_transparant"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_jurnal_photo"
             card_view:layout_constraintTop_toTopOf="@+id/img_jurnal_photo"
