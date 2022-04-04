@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.JurnalMainActivity"
     android:orientation="vertical"
-    android:background="#EDF5FD">
+    android:background="@color/white">
 
    <androidx.appcompat.widget.Toolbar
        android:layout_width="match_parent"

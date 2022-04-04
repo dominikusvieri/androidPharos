@@ -136,10 +136,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:padding="5dp"
-            android:textColor="#153E7E"
             android:layout_toRightOf="@+id/tv_tanggal_update"
             android:background="@drawable/bg_white_transparant"
+            android:padding="5dp"
+            android:textColor="#153E7E"
             android:textSize="16sp" />
     </RelativeLayout>
 
@@ -171,6 +171,8 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/bg_white_transparant"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:textSize="16sp" />
 
 
@@ -191,12 +193,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_item_lampiran"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="15dp"
             android:autoLink="web"
-            android:background="@drawable/bg_white_transparant"
+            android:background="@drawable/bg_transparantno"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:textSize="16sp" />
     </RelativeLayout>
 </LinearLayout>
