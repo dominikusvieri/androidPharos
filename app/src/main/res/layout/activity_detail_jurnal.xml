@@ -47,7 +47,6 @@
             android:background="@drawable/bg_white_transparant"
             android:ems="10"
             android:gravity="center"
-            android:text="CONTOH"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
