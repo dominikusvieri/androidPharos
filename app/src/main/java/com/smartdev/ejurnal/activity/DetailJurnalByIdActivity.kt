@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.smartdev.ejurnal.R
@@ -55,8 +57,14 @@ class DetailJurnalByIdActivity : AppCompatActivity() {
                 response: Response<ResponseRequestById>
             ) {
                 response.isSuccessful.let {
-                    val result =  response.body()?.dataRequest
-                    detailRequestAdapter.updateList(response.body()?.dataRequest as List<DataRequest>, activity = this@DetailJurnalByIdActivity)
+                    if (response.body()?.dataRequest?.size == 0){
+                        Log.d("Gone", "abc")
+                        tv_none.visibility = View.VISIBLE
+                    }else{
+                        detailRequestAdapter.updateList(response.body()?.dataRequest as List<DataRequest>, activity = this@DetailJurnalByIdActivity)
+                    }
+//                    detailRequestAdapter.updateList(response.body()?.dataRequest as List<DataRequest>, activity = this@DetailJurnalByIdActivity)
+
                 }
 
             }
