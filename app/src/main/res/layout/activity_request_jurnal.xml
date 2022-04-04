@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDF5FD"
+    android:background="#FFF"
     tools:context=".activity.RequestJurnalActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/white" >
-        //sss
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
