@@ -33,39 +33,30 @@
             android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="vertical"
         android:background="@drawable/bg_white_transparant"
+        android:orientation="vertical"
         android:padding="8dp">
+
         <TextView
             android:id="@+id/tv_isi_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_white_transparant"
             android:ems="10"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@id/img_detail_jurnal"
+            android:gravity="center"
             android:text="CONTOH"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toEndOf="@+id/img_detail_jurnal"
-            card_view:layout_constraintTop_toTopOf="@+id/img_detail_jurnal"
-            android:background="@drawable/bg_white_transparant"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/img_detail_jurnal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_baseline_article_24"
-            card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_item_tahun_terbit"
@@ -73,44 +64,53 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_isi_judul"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toRightOf="@id/img_detail_jurnal"
             android:text="Tahun terbit: "
             android:textSize="16sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toEndOf="@+id/img_detail_jurnal"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_isi_judul"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_isi_judul" />
 
         <TextView
             android:id="@+id/tv_isi_tahun_terbit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_isi_judul"
-            android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/tv_item_tahun_terbit"
             android:textSize="16sp"
-            card_view:layout_constraintStart_toEndOf="@+id/tv_item_tahun_terbit"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_isi_judul" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item_tahun_terbit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.036"
+            app:layout_constraintStart_toEndOf="@+id/tv_item_tahun_terbit"
+            app:layout_constraintTop_toBottomOf="@+id/tv_isi_judul"
+            app:layout_constraintVertical_bias="1.0" />
 
+        <TextView
+            android:id="@+id/tv_item_penerbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_isi_judul"
+            android:layout_marginTop="12dp"
+            android:text="Penerbit: "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_tahun_terbit" />
 
         <TextView
             android:id="@+id/tv_isi_penerbit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toEndOf="@id/img_detail_jurnal"
-
             android:layout_marginTop="10dp"
             android:text="isi penerbit"
             android:textSize="16sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toEndOf="@+id/img_detail_jurnal"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_tahun_terbit" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_penerbit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -170,10 +170,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/bg_white_transparant"
+            android:background="@drawable/bg_transparantno"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
 
 
         <TextView
